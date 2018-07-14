@@ -1,12 +1,22 @@
 {
   "name": "listing_app",
+  "jest": {
+    "verbose": true,
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupTestFrameworkScriptFile": "/home/megha/Megha/List/React/src/setupTest.js",
+    "testRegex": "./test/.*.js$"
+  },
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
   "dependencies": {
+    "@shopify/polaris": "^2.3.1",
     "babel-jest": "^23.2.0",
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.1.1",
+    "enzyme-to-json": "^3.3.4",
     "jest": "^23.3.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -21,6 +31,7 @@
     "jest-enzyme": "^6.0.2",
     "react-test-renderer": "^16.4.1",
     "redux": "^4.0.0",
+    "redux-mock-store": "^1.5.3",
     "uuid": "^3.3.2"
   },
   "scripts": {
@@ -29,15 +40,5 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "test:watch": "jest --watch"
-
-  },
-  "jest": {
-    "verbose": true,
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "setupTestFrameworkScriptFile": "~/Megha/ListingApp/src/",
-  "testPathIgnorePatterns": ["<rootDir>/__tests__/setup/"],
-    "testRegex": "./test/.*.js$"
   }
 }

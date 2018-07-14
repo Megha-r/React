@@ -4,5 +4,3 @@ export const addArticle =  articles => ({
  
 });
 
-// [ articles.id,
-//   articles.title]

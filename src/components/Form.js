@@ -1,20 +1,8 @@
 import React, { Component } from "react";
-// import { connect } from "react-redux";
-// import PropTypes from "prop-types";
 import uuidv1 from "uuid";
 import { Button, Input } from 'reactstrap';
-// import { addArticle } from "../ducks/action/index";
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     addArticle: article => {
-//       console.log('article', article)
-//       dispatch(addArticle(article))
-//     }
-//   };
-// };
-
-class Form extends Component {
+class ConnectedForm extends Component {
   constructor() {
     super();
 
@@ -27,11 +15,12 @@ class Form extends Component {
   }
 
   handleChange(event) {
-    this.setState({ [event.target.id]: event.target.value });
+    this.setState({ [event.target.id]: event.target.value , title: event.target.value});
   }
 
   handleSubmit(event) {
     console.log("Inside handle submmit");
+    console.log("******************", this.props);
     event.preventDefault();
     const { title } = this.state;
     const id = uuidv1();
@@ -49,23 +38,17 @@ class Form extends Component {
             placeholder="Enter any string"
             type="text"
             className="form-control"
-            id="title"
+            id="textInput"
             value={title}
             onChange={this.handleChange}
           />
         </div>
-        <Button color="info" type="submit" className="btn btn-success btn-lg">
+        <Button color="info" type="submit" className="btn btn-success btn-lg" id="savedBtn">
           SAVE
         </Button>
       </form>
     );
   }
 }
+export default ConnectedForm;
 
-// const Form = connect(null, mapDispatchToProps)(ConnectedForm);
-
-// ConnectedForm.propTypes = {
-//   addArticle: PropTypes.func.isRequired
-// };
-
-export default Form;

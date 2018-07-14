@@ -1,18 +1,21 @@
 import React from "react";
-import List from "../src/components/List";
-import Form from "../src/components/Form";
+import Search from "./components/Search";
+// import { FormContainer } from "./components/FormContainer";
+import ShopifyTable from './components/ShopifyTable';
+
+
 
 const App = () => (
-  <div className="row mt-5">
-    <div className="col-md-4 offset-md-1">
-      <h2>Articles</h2>
-      <List />
-    </div>
-    <div className="col-md-4 offset-md-1">
-      <h2>Add a new article</h2>
-      <Form  />
+  // <div className="row mt-5">
+    <div>
+    <Search />
+    <div >
+      <ShopifyTable />
     </div>
   </div>
+  
 );
 console.log ("I am inside APP Component");
 export default App;
+
+

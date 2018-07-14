@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
-
 const mapStateToProps = state => {
   console.log('State::::::::::::', state)
 
@@ -11,6 +10,7 @@ const mapStateToProps = state => {
 };
 
 const ConnectedList = ({ articles }) => (
+  
   <ul className="list-group list-group-flush">
     {articles.map(el => (
             <ListGroup>
@@ -18,10 +18,6 @@ const ConnectedList = ({ articles }) => (
         {el.title}
         </ListGroupItem>
         </ListGroup>
-
-      /* <li className="list-group-item" key={el.id}>
-        {el.title}
-      </li> */
 
     ))}
   </ul>
