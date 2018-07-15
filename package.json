@@ -12,18 +12,25 @@
   "private": true,
   "main": "index.js",
   "dependencies": {
+    "@devexpress/dx-react-core": "^1.4.0",
+    "@devexpress/dx-react-grid": "^1.4.0",
+    "@devexpress/dx-react-grid-bootstrap4": "^1.4.0",
     "@shopify/polaris": "^2.3.1",
+    "antd": "^3.6.6",
     "babel-jest": "^23.2.0",
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.1.1",
     "enzyme-to-json": "^3.3.4",
+    "fixed-data-table": "^0.6.5",
     "jest": "^23.3.0",
     "react": "^16.4.1",
+    "react-bootstrap-table": "^4.3.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-scripts": "0.9.x",
     "reactstrap": "^6.2.0",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "styled-components": "^3.3.3"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
